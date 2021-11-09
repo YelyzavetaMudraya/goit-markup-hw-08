@@ -1,0 +1,48 @@
+.account {
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-right: 70px;
+    }
+  }
+}
+.account__title {
+  color: #ffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.account__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.account__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-text-color;
+  }
+}
+
+.account__icon {
+  fill: #ffff;
+}

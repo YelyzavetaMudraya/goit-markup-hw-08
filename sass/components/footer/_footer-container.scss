@@ -1,0 +1,23 @@
+.footer {
+  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__position {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      text-align: start;
+    }
+  }
+}

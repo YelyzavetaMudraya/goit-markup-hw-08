@@ -1,0 +1,89 @@
+.dream-team {
+  background-color: #f5f4fa;
+}
+.team__item {
+  @media screen and (max-width: 767px) {
+    &:not(last-child) {
+      margin-bottom: $project-item-gap;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      flex-basis: calc((100% - 2 * #{$project-item-gap}) / 2);
+      margin: calc(#{$project-item-gap}/ 2);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      margin-left: $project-item-gap;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.team__content {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team__title {
+  color: $h-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.team__text {
+  color: $main-text-color;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+}
+.networks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.networks__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.networks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  @include transition(background-color);
+
+  &:focus,
+  &:hover {
+    background-color: $accent-text-color;
+  }
+}
+.networks__icon {
+  fill: $fill-icon;
+  @include transition(fill);
+
+  .networks__link:focus &,
+  .networks__link:hover & {
+    fill: #ffff;
+  }
+}

@@ -1,0 +1,52 @@
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(0px - (#{$project-item-gap} / 2));
+}
+.clients__item {
+  box-sizing: border-box;
+  margin: calc(#{$project-item-gap} / 2);
+  flex-basis: calc((100% - 2 * #{$project-item-gap}) / 2);
+
+  @media screen and (min-width: 768px) {
+    & {
+      flex-basis: calc((100% - 3 * #{$project-item-gap}) / 3);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      flex-basis: calc((100% - 6 * #{$project-item-gap}) / 6);
+    }
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  @include transition(border-color);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-text-color;
+  }
+}
+
+.clients__icon {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 106px;
+  height: 60px;
+  fill: $fill-icon;
+  @include transition(fill);
+
+  .clients__link:focus &,
+  .clients__link:hover & {
+    fill: $accent-text-color;
+  }
+}
